@@ -1,0 +1,873 @@
+<!--Created by: Reem Almokhdab-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shop | One More Bite</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="40x40" href="images/sweet.jpg">
+    <link rel="icon" sizes="400x400" href="images/sweet.jpg">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-flex">
+            <a href="Home.html" class="logo-left">
+                <img src="images/One-More-Bite-loge.jpeg" alt="One More Bite" style="width: 180px;" />
+            </a>
+            <!-- Moving Slideshow Box -->
+            <div class="moving-rectangle">
+                <img class="slideshow-image" src="images/sample1.jpeg" alt="Slide 1">
+            </div>
+            <a href="cart.html" title="Basket" style="position: relative;">
+                <img src="images/basket2.jpeg" alt="Basket" style="width: 80px;">
+                <span id="cart-count" class="cart-count-badge">0</span>
+
+            </a>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Shopping.html">Shopping</a></li>
+            <li><a href="Buildyourownbox.html">Build Your Own Box</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="box-row">
+            <!--Image and Message -->
+            <div class="box-column">
+                <div class="box-image-wrapper">
+                    <img src="images/NewBox.png" alt="Dessert Box" />
+                </div>
+
+                <div class="custom-message">
+                    <label for="message">🎉 Add a custom message to your box:</label><br><br>
+                    <input type="text" id="message" placeholder="Example: Happy Birthday, Yazan!" />
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div class="box-description">
+                <p>With the Create Your Own Desserts Box, the possibilities are endless. Choose from a variety of delicious mini desserts.</p>
+                <p>✍️ Add your own personalized message to make it truly special.</p>
+            </div>
+        </div>
+
+        <!--Deserts Options-->
+        <div class="shop-layout">
+
+            <!-- Product Brownie 1 "page 1" -->
+            <section class="product-grid">
+                <!-- Product product Brownie 1 "Page 1" -->
+                <div class="product-card" data-page="1" data-price="5.00">
+                    <img src="images/Brownie1.jpeg" alt="Brownie 1">
+                    <h4>Chocolate Brownie</h4>
+                    <p>Fudgy brownie with berries and white chocolate.</p>
+                    <p class="price">SAR 5.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+                    </div>
+                </div>
+
+                <!-- PRODUCT Brownie 2 "page 1" -->
+                <div class="product-card" data-page="1" data-price="4.00">
+                    <img src="images/Brownie2.jpeg" alt="Brownie 2">
+                    <h4>Marble Brownie</h4>
+                    <p class="desc">Rich chocolate brownie swirled with smooth vanilla.</p>
+                    <p class="price">SAR 4.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT Brownie 3 "page 1"-->
+                <div class="product-card" data-page="1" data-price="4.00">
+                    <img src="images/Brownie3.jpeg" alt="Brownie 3">
+                    <h4>Red Velvet Brownie</h4>
+                    <p class="desc">Soft red velvet brownie with creamy cocoa flavor.</p>
+                    <p class="price">SAR 4.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT Brownie 4 "page 1"-->
+                <div class="product-card" data-page="1" data-price="4.59">
+                    <img src="images/Brownie4.jpeg" alt="Brownie 4">
+                    <h4>Pink Berry Brownie</h4>
+                    <p class="desc">Fudgy brownie topped with sweet pink berries fruity and fun.</p>
+                    <p class="price">SAR 4.59</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT Brownie 5 "page 1"-->
+                <div class="product-card" data-page="1" data-price="5.00">
+                    <img src="images/Brownie5.jpeg" alt="Brownie 5">
+                    <h4>Cookie Brownie</h4>
+                    <p class="desc">Chewy brownie with chocolate chip cookie chunks.</p>
+                    <p class="price">SAR 5.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT Cheesecake 1 "Page 2" -->
+                <div class="product-card" data-page="2" data-price="4.90">
+                    <img src="images/Cheesecake1.jpeg" alt="Cheesecake 1">
+                    <h4>Strawberry Cheesecake</h4>
+                    <p class="desc">Creamy cheesecake topped with fresh strawberries and glaze.</p>
+                    <p class="price">SAR 4.90</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+                    </div>
+                </div>
+
+
+                <!-- Product Cheesecake 2 "Page 2" -->
+                <div class="product-card" data-page="2" data-price="5.00">
+                    <img src="images/Cheesecake2.jpeg" alt="Cheesecake 2">
+                    <h4>Lemon Cheesecake</h4>
+                    <p class="desc">Zesty lemon cheesecake with a bright, refreshing flavor.</p>
+                    <p class="price">SAR 5.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- Product Cheesecake 3 "Page 2" -->
+                <div class="product-card" data-page="2" data-price="5.00">
+                    <img src="images/Cheesecake3.jpeg" alt="Cheesecake 3">
+                    <h4>Caramel Peanut Cheesecake</h4>
+                    <p class="desc">Rich caramel cheesecake topped with crunchy roasted peanuts</p>
+                    <p class="price">SAR 5.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT Cheesecake 4 "Page 2"  -->
+                <div class="product-card" data-page="2" data-price="6.00">
+                    <img src="images/Cheesecake4.jpeg" alt="Cheesecake 4">
+                    <h4>Purple Berry Cheesecake</h4>
+                    <p class="desc">Smooth cheesecake swirled with sweet purple berries.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT Cheesecake 5 "Page 2" -->
+                <div class="product-card" data-page="2" data-price="7.00">
+                    <img src="images/Cheesecake5.jpeg" alt="Cheesecake 5">
+                    <h4>Cherry Cheesecake</h4>
+                    <p class="desc">Classic cheesecake topped with juicy cherries and glaze.</p>
+                    <p class="price">SAR 7.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+
+
+                <!-- Product macaron 1 "Page 3" -->
+                <div class="product-card" data-page="3" data-price="6.00">
+                    <img src="images/Macaron1.jpeg" alt="Macaron 1">
+                    <h4>Strawberry Macaron</h4>
+                    <p>Pink macaron filled with fresh berry cream.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- Product macaron 2 "Page 3" -->
+                <div class="product-card" data-page="3" data-price="6.00">
+                    <img src="images/macaron2.jpeg" alt="macaron 2">
+                    <h4>Strawberry Macaron</h4>
+                    <p class="desc">Light strawberry flavored shell filled with smooth vanilla cream sweet.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- Product macaron 3 "Page 3" -->
+                <div class="product-card" data-page="3" data-price="6.00">
+                    <img src="images/macaron3.jpeg" alt="macaron 3">
+                    <h4>Blueberry Macaron</h4>
+                    <p class="desc">Blueberry shell filled with rich creamy berry.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+                    </div>
+                </div>
+
+                <!-- Product macaron 4 "Page 3" -->
+                <div class="product-card" data-page="3" data-price="6.00">
+                    <img src="images/macaron4.jpeg" alt="macaron 4">
+                    <h4>Lemon Macaron</h4>
+                    <p class="desc">Bright lemon shell filled with smooth buttercream.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+                    </div>
+                </div>
+
+                <!-- Product macaron 5 "Page 3" -->
+                <div class="product-card" data-page="3" data-price="6.00">
+                    <img src="images/macaron5.jpeg" alt="macaron 5">
+                    <h4>Marshmallow Biscuit Macaron</h4>
+                    <p class="desc">Crispy chocolate shell with marshmallow and biscuit.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+                    </div>
+                </div>
+
+                <!-- PRODUCT pie 1 "Page 4" -->
+                <div class="product-card" data-page="4" data-price="6.00">
+                    <img src="images/pie1.jpeg" alt="pie 1">
+                    <h4>Fruit Tart</h4>
+                    <p class="desc">Crisp tart filled with creamy vanilla and topped with fresh, juicy fruits.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+                    </div>
+                </div>
+
+
+                <!-- PRODUCT pie 2 "Page 4"  -->
+                <div class="product-card" data-page="4" data-price="6.00">
+                    <img src="images/pie2.jpeg" alt="pie 2">
+                    <h4>Lemon Blossom Tart</h4>
+                    <p class="desc">Tangy lemon curd in crisp shell, topped.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT pie 3 "Page 4" -->
+                <div class="product-card" data-page="4" data-price="6.00">
+                    <img src="images/pie3.jpeg" alt="pie 3">
+                    <h4>Jam with Almond Tart</h4>
+                    <p class="desc">Buttery crust with strawberry jam and almonds.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT pie 4 "Page 4" -->
+                <div class="product-card" data-page="4" data-price="6.00">
+                    <img src="images/pie4.jpeg" alt="pie 4">
+                    <h4>Mango Cream Tart</h4>
+                    <p class="desc">Crisp shell with creamy filling and mango.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT pie 5 "Page 4" -->
+                <div class="product-card" data-page="4" data-price="6.00">
+                    <img src="images/pie5.jpeg" alt="pie 5">
+                    <h4>Peach Cream Tart</h4>
+                    <p class="desc">Buttery tart with vanilla cream and peaches.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT puffs 1 "Page 5" -->
+                <div class="product-card" data-page="5" data-price="7.00">
+                    <img src="images/puffs1.jpeg" alt="puffs 1">
+                    <h4>Strawberry Puff</h4>
+                    <p class="desc">Flaky puff filled with sweet strawberry cream.</p>
+                    <p class="price">SAR 7.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT puffs 2 "Page 5" -->
+                <div class="product-card" data-page="5" data-price="7.00">
+                    <img src="images/puffs2.jpeg" alt="puffs 1">
+                    <h4>Vanilla Puff</h4>
+                    <p class="desc">Crispy puff filled with smooth vanilla cream.</p>
+                    <p class="price">SAR 7.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT puffs 3 "Page 5" -->
+                <div class="product-card" data-page="5" data-price="6.00">
+                    <img src="images/puffs3.jpeg" alt="puffs 1">
+                    <h4>Lemon Puff</h4>
+                    <p class="desc">Light puff with tangy lemon cream inside.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT puffs 4 "Page 5" -->
+                <div class="product-card" data-page="5" data-price="6.00">
+                    <img src="images/puffs4.jpeg" alt="puffs 1">
+                    <h4>Caramel Puff</h4>
+                    <p class="desc">Buttery puff filled with rich caramel cream.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT puffs 5 "Page 5" -->
+                <div class="product-card" data-page="5" data-price="6.00">
+                    <img src="images/puffs5.jpeg" alt="puffs 1">
+                    <h4>Matcha Puff</h4>
+                    <p class="desc">Crisp puff filled with earthy matcha cream.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT mille feuille 1 "Page 6" -->
+                <div class="product-card" data-page="6" data-price="7.00">
+                    <img src="images/mille-feuille1.jpeg" alt="puffs 1">
+                    <h4>Classic Mille Feuille</h4>
+                    <p class="desc">Layered puff pastry with smooth vanilla custard.</p>
+                    <p class="price">SAR 7.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT  mille feuille 2 "Page 6" -->
+                <div class="product-card" data-page="6" data-price="8.50">
+                    <img src="images/mille-feuille2.jpeg" alt="puffs 1">
+                    <h4>Heart Shaped Mille Feuille</h4>
+                    <p class="desc">Heart-shaped pastry with vanilla and strawberry custard.</p>
+                    <p class="price">SAR 8.50</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT  mille feuille 3 "Page 6" -->
+                <div class="product-card" data-page="6" data-price="7.00">
+                    <img src="images/mille-feuille3.jpeg" alt="puffs 1">
+                    <h4>Strawberry Mille Feuille</h4>
+                    <p class="desc">Flaky layers filled with fresh strawberry cream.</p>
+                    <p class="price">SAR 7.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT  mille feuille 4 "Page 6" -->
+                <div class="product-card" data-page="6" data-price="7.00">
+                    <img src="images/mille-feuille4.jpeg" alt="puffs 1">
+                    <h4>Lemon Mille Feuille</h4>
+                    <p class="desc">Crisp pastry with tangy lemon custard filling.</p>
+                    <p class="price">SAR 7.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT  mille feuille 5 "Page 6" -->
+                <div class="product-card" data-page="6" data-price="8.00">
+                    <img src="images/mille-feuille5.jpeg" alt="puffs 1">
+                    <h4>Pink Berry Mille Feuille</h4>
+                    <p class="desc">Flaky pastry layered with pink berry cream.</p>
+                    <p class="price">SAR 8.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cookies Design 1 "Page 7" -->
+                <div class="product-card" data-page="7" data-price="7.00">
+                    <img src="images/cookies-design1.jpeg" alt="puffs 1">
+                    <h4>Chocolate Brownie</h4>
+                    <p class="desc">Fudgy brownie topped with berries and pomegranate.</p>
+                    <p class="price">SAR 7.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cookies Design 2 "Page 7" -->
+                <div class="product-card" data-page="7" data-price="9.00">
+                    <img src="images/cookies-design2.jpeg" alt="puffs 1">
+                    <h4>Chocolate Brownie</h4>
+                    <p class="desc">Fudgy brownie topped with berries and pomegranate.</p>
+                    <p class="price">SAR 9.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cookies Design 3 "Page 7" -->
+                <div class="product-card" data-page="7" data-price="10.00">
+                    <img src="images/cookies-design3.jpeg" alt="puffs 1">
+                    <h4>Chocolate Brownie</h4>
+                    <p class="desc">Fudgy brownie topped with berries and pomegranate.</p>
+                    <p class="price">SAR 10.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cookies Design 4 "Page 7" -->
+                <div class="product-card" data-page="7" data-price="8.00">
+                    <img src="images/cookies-design4.jpeg" alt="puffs 1">
+                    <h4>Chocolate Brownie</h4>
+                    <p class="desc">Fudgy brownie topped with berries and pomegranate.</p>
+                    <p class="price">SAR 8.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cookies Design 5 "Page 7" -->
+                <div class="product-card" data-page="7" data-price="10.00">
+                    <img src="images/cookies-design5.jpeg" alt="puffs 1">
+                    <h4>Chocolate Brownie</h4>
+                    <p class="desc">Fudgy brownie topped with berries and pomegranate.</p>
+                    <p class="price">SAR 10.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cookies 1 "Page 8" -->
+                <div class="product-card" data-page="8" data-price="10.00">
+                    <img src="images/cookies1.jpeg" alt="puffs 1">
+                    <h4>Sprinkle Cookie</h4>
+                    <p class="desc">Soft cookie filled with colorful candy sprinkles.</p>
+                    <p class="price">SAR 10.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cookies 2 "Page 8" -->
+                <div class="product-card" data-page="8" data-price="10.00">
+                    <img src="images/cookies2.jpeg" alt="puffs 1">
+                    <h4>Classic Cookie</h4>
+                    <p class="desc">Golden-baked cookie with a classic buttery taste.</p>
+                    <p class="price">SAR 10.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cookies 3 "Page 8" -->
+                <div class="product-card" data-page="8" data-price="7.00">
+                    <img src="images/cookies3.jpeg" alt="puffs 1">
+                    <h4>Oreo Cookie</h4>
+                    <p class="desc">Chewy cookie packed with crushed Oreo chunks.</p>
+                    <p class="price">SAR 7.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cookies 4 "Page 8" -->
+                <div class="product-card" data-page="8" data-price="8.00">
+                    <img src="images/cookies4.jpeg" alt="puffs 1">
+                    <h4>Red Velvet Oreo Cookie</h4>
+                    <p class="desc">Red velvet cookie with creamy Oreo center.</p>
+                    <p class="price">SAR 8.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cookies 5 "Page 8" -->
+                <div class="product-card" data-page="8" data-price="6.50">
+                    <img src="images/cookies5.jpeg" alt="puffs 1">
+                    <h4>Marshmallow Cookie</h4>
+                    <p class="desc">Warm cookie stuffed with gooey marshmallow inside.</p>
+                    <p class="price">SAR 6.50</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cake 1 "Page 9" -->
+                <div class="product-card" data-page="9" data-price="7.00">
+                    <img src="images/cake1.jpeg" alt="puffs 1">
+                    <h4>Red Velvet Cake</h4>
+                    <p class="desc">Moist red velvet cake with creamy layers inside.</p>
+                    <p class="price">SAR 7.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cake 2 "Page 9" -->
+                <div class="product-card" data-page="9" data-price="7.00">
+                    <img src="images/cake2.jpeg" alt="puffs 1">
+                    <h4>Vanilla Berry Cake</h4>
+                    <p class="desc">Vanilla cake filled with strawberry and berry mix.</p>
+                    <p class="price">SAR 7.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cake 3 "Page 9" -->
+                <div class="product-card" data-page="9" data-price="8.00">
+                    <img src="images/cake3.jpeg" alt="puffs 1">
+                    <h4>Lemon Cake</h4>
+                    <p class="desc">Zesty lemon cake with light citrus flavor.</p>
+                    <p class="price">SAR 8.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cake 4 "Page 9" -->
+                <div class="product-card" data-page="9" data-price="10.00">
+                    <img src="images/cake4.jpeg" alt="puffs 1">
+                    <h4>Blueberry Lemon Cake</h4>
+                    <p class="desc">Lemon cake topped with juicy blueberries inside.</p>
+                    <p class="price">SAR 10.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+
+                <!-- PRODUCT cake 5 "Page 9" -->
+                <div class="product-card" data-page="9" data-price="8.00">
+                    <img src="images/cake5.jpeg" alt="puffs 1">
+                    <h4>Pistachio Cake</h4>
+                    <p class="desc">Soft pistachio cake with nutty, smooth cream.</p>
+                    <p class="price">SAR 8.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cake ball 1 "Page 10" -->
+                <div class="product-card" data-page="10" data-price="5.00">
+                    <img src="images/cake-ball1.jpeg" alt="puffs 1">
+                    <h4>Red Velvet Cake Ball</h4>
+                    <p class="desc">Moist red velvet dipped in creamy coating.</p>
+                    <p class="price">SAR 5.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cake ball 2 "Page 10" -->
+                <div class="product-card" data-page="10" data-price="4.50">
+                    <img src="images/cake-ball2.jpeg" alt="puffs 1">
+                    <h4>Vanilla Cake Ball</h4>
+                    <p class="desc">Soft vanilla cake rolled in smooth glaze.</p>
+                    <p class="price">SAR 4.50</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cake ball 3 "Page 10" -->
+                <div class="product-card" data-page="10" data-price="6.00">
+                    <img src="images/cake-ball3.jpeg" alt="puffs 1">
+                    <h4>Chocolate Cake Ball</h4>
+                    <p class="desc">Rich chocolate cake covered in chocolate shell.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Addt</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cake ball 4 "Page 10" -->
+                <div class="product-card" data-page="10" data-price="6.00">
+                    <img src="images/cake-ball4.jpeg" alt="puffs 1">
+                    <h4>Lemon Cake Ball</h4>
+                    <p class="desc">Zesty lemon cake with a sweet coating.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+
+                <!-- PRODUCT cake ball 5 "Page 10" -->
+                <div class="product-card" data-page="10" data-price="6.00">
+                    <img src="images/cake-ball5.jpeg" alt="puffs 1">
+                    <h4>Oreo Cake Ball</h4>
+                    <p class="desc">Crushed Oreo cake dipped in rich chocolate.</p>
+                    <p class="price">SAR 6.00</p>
+                    <div class="product-buttons">
+                        <button class="add-to-basket">Add</button>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- This div is where the pagination buttons (like page 1, 2, 3...) will be inserted dynamically -->
+    <div id="pagination"></div>
+
+    <p id="box-counter" style="text-align: center; font-weight: bold; margin-top: 20px; font-size: 18px;">🍰 Total Boxes: 0</p>
+
+    <section class="box-preview">
+        <h2>Your Box:</h2>
+        <ul id="box-items"></ul>
+        <p id="box-total">Total: SAR 0.00</p>
+        <button onclick="checkoutBox()">Add to Cart</button>
+    </section>
+
+    <!-- This part is for the slideshow -->
+    <script>
+        const images = [
+            "images/sample1.jpeg",
+            "images/sample2.jpeg",
+            "images/sample3.jpeg"
+        ];
+        let index = 0;
+        const imgElement = document.querySelector(".slideshow-image");
+
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            imgElement.style.opacity = 0;
+            setTimeout(() => {
+                imgElement.src = images[index];
+                imgElement.style.opacity = 1;
+            }, 500);
+        }, 10000);
+    </script>
+
+
+    <!-- This script gives your dessert list pagination — showing a limited number per page and letting the user click page numbers to view more-->
+    <script>
+        const products = document.querySelectorAll('.product-card');
+        const pagination = document.getElementById('pagination');
+        const totalPages = 10;
+        let currentPage = 1;
+
+        function showPage(page) {
+            currentPage = page;
+            products.forEach(prod => {
+                if (prod.getAttribute('data-page') == page) {
+                    prod.style.display = 'flex';
+                } else {
+                    prod.style.display = 'none';
+                }
+            });
+            updatePagination();
+        }
+        function updatePagination() {
+            pagination.innerHTML = '';
+            for (let i = 1; i <= totalPages; i++) {
+                const btn = document.createElement('button');
+                btn.textContent = i;
+                if (i === currentPage) btn.classList.add('active');
+                btn.addEventListener('click', () => showPage(i));
+                pagination.appendChild(btn);
+            }
+        }
+        const urlParams = new URLSearchParams(window.location.search);
+        const pageFromURL = parseInt(urlParams.get('page')) || 1; // default to 1 if not provided
+        showPage(pageFromURL);
+    </script>
+
+    <!-- This script is used to allows users to select desserts with a min/max limit, build a custom box, and add it to the shopping cart-->
+    <script>
+        const selectedItems = {};
+        const productPrices = {};
+        let cartCount = 0;
+        let boxCount = 0;
+
+        function updateCartCount() {
+            document.getElementById('cart-count').textContent = cartCount;
+        }
+
+        function updateBoxDisplay() {
+            const boxTotal = document.getElementById('box-total');
+            let total = 0;
+            const boxList = document.getElementById('box-items');
+            boxList.innerHTML = '';
+
+            for (const item in selectedItems) {
+                const quantity = selectedItems[item];
+                const price = productPrices[item];
+
+                if (quantity > 0) {
+                    total += quantity * price;
+
+                    // Create list item
+                    const li = document.createElement('li');
+                    li.innerHTML = `
+                ${item} x${quantity} 
+                <button class="remove-one" data-item="${item}">x</button>
+            `;
+                    boxList.appendChild(li);
+                }
+            }
+
+            boxTotal.textContent = `Total: SAR ${total.toFixed(2)}`;
+
+            // Attach click listeners to remove buttons
+            document.querySelectorAll('.remove-one').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const itemName = btn.getAttribute('data-item');
+                    if (selectedItems[itemName] > 1) {
+                        selectedItems[itemName]--;
+                    } else {
+                        delete selectedItems[itemName]; // remove completely if 1
+                    }
+                    updateBoxDisplay();
+                });
+            });
+        }
+
+        function checkoutBox() {
+            const totalItems = Object.values(selectedItems).reduce((sum, qty) => sum + qty, 0);
+
+            if (totalItems < 6) {
+                alert("Please select at least 6 desserts 🍩");
+                return;
+            }
+
+            if (totalItems > 12) {
+                alert("You can only select up to 12 desserts 🎂");
+                return;
+            }
+
+            const message = document.getElementById('message').value;
+
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            const boxItems = Object.entries(selectedItems).map(([name, qty]) => `${name} x${qty}`).join(", ");
+            const totalPrice = Object.entries(selectedItems).reduce((sum, [name, qty]) => sum + (productPrices[name] * qty), 0);
+
+            cart.push({
+                name: "Dessert Box",
+                quantity: 1,
+                image: "images/NewBox.png",
+                price: totalPrice,
+                message: message,
+                contents: selectedItems
+            });
+
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            document.getElementById("cart-count").textContent = cart.length;
+            localStorage.setItem("cartCount", cart.length);
+
+            boxCount++;
+            document.getElementById('box-counter').textContent = `📦 Total Boxes: ${boxCount}`;
+            document.getElementById('message').value = '';
+            for (const k in selectedItems) delete selectedItems[k];
+            updateBoxDisplay();
+
+            alert("🎉 Your box has been added to the cart!");
+        }
+
+        document.querySelectorAll('.add-to-basket').forEach(button => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.product-card');
+                const name = card.querySelector('h4').textContent;
+                const price = parseFloat(card.getAttribute('data-price'));
+
+                const currentTotalItems = Object.values(selectedItems).reduce((sum, qty) => sum + qty, 0);
+                if (currentTotalItems >= 12) {
+                    alert("You can only add up to 12 desserts per box 🎁");
+                    return;
+                }
+
+                productPrices[name] = price;
+                selectedItems[name] = (selectedItems[name] || 0) + 1;
+
+                updateBoxDisplay();
+            });
+        });
+        window.addEventListener('DOMContentLoaded', function () {
+            const storedCount = localStorage.getItem("cartCount");
+            document.getElementById("cart-count").textContent = storedCount || 0;
+
+        });
+
+        document.getElementById('box-counter').textContent = `📦 Total Boxes: ${boxCount}`;
+
+    </script>
+
+    <!--To show cart items on all pages-->
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const count = parseInt(localStorage.getItem('cart')) || [];
+            const badge = document.getElementById('cart-count');
+            if (badge) {
+                badge.textContent = count.length;
+            }
+        });
+    </script>
+
+    <footer>
+        <p>&copy; Copyright 2025. All Rights Reserved.</p>
+        <p><a href="mailto:onemorebite@dessert.net">onemorebite@dessert.net</a></p>
+    </footer>
+</body>
+</html>

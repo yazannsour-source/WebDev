@@ -1,0 +1,133 @@
+<!--- Norah Alhajri -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout | One More Bite</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="40x40" href="images/sweet.jpg">
+    <link rel="icon" sizes="400x400" href="images/sweet.jpg">
+</head>
+<body>
+
+    <header>
+        <div id="container">
+            <div class="header-flex">
+                <a href="Home.html" class="logo-left">
+                    <img src="images/One-More-Bite-loge.jpeg" alt="One More Bite" style="width: 180px;">
+                </a>
+                <div class="moving-rectangle">
+                    <img class="slideshow-image" src="images/sample1.jpeg" alt="Slide 1">
+                </div>
+                <a href="cart.html" title="Basket" style="position: relative;">
+                    <img src="images/basket2.jpeg" alt="Basket" style="width: 80px;">
+                    <span id="cart-count" class="cart-count-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h2>Checkout</h2>
+
+        <!-- Cart Summary with Images -->
+        <div id="checkout-summary"></div>
+
+        <!-- Shipping Details -->
+        <form id="shipping-form">
+            <h3>Shipping Details</h3>
+            <input type="text" placeholder="Full Name" required><br>
+            <input type="text" placeholder="Address" required><br>
+            <input type="tel" placeholder="Phone Number" required><br>
+        </form>
+
+        <!-- Payment Method -->
+        <div class="payment-method">
+            <h3>Payment Method</h3>
+            <label>
+                <input type="radio" name="payment" value="card" checked>
+                Card
+                <input type="radio" name="payment" value="apple pay" checked>
+                Apple pay
+            </label>
+        </div>
+
+        <!-- Total & Confirm -->
+        <div>
+            <p>Total: <span id="total-price">SAR 0.00</span></p>
+            <button class="red-btn" id="confirm-order-btn" type="button">Confirm Order</button>
+            <button class="red-btn" onclick="history.back()">← Back</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 One More Bite. All Rights Reserved.</p>
+        <p><a href="mailto:onemorebite@dessert.net">onemorebite@dessert.net</a></p>
+    </footer>
+
+    <script>
+
+        document.getElementById("confirm-order-btn").addEventListener("click", (e) => {
+            e.preventDefault();
+
+            const nameInput = document.querySelector('#shipping-form input[placeholder="Full Name"]').value.trim();
+            const addressInput = document.querySelector('#shipping-form input[placeholder="Address"]').value.trim();
+            const phoneInput = document.querySelector('#shipping-form input[placeholder="Phone Number"]').value.trim();
+
+            if (nameInput === "" || addressInput === "" || phoneInput === "") {
+                alert("Please fill in all shipping details, including all your information ");
+                return;
+            }
+            // Clear cart
+            localStorage.removeItem("cart");
+
+            // Navigate to Thank You page
+            window.location.href = "thankyou.html";
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const cart = JSON.parse(localStorage.getItem("cart")) || [];
+            const summaryContainer = document.getElementById("checkout-summary");
+            const totalPriceSpan = document.getElementById("total-price");
+
+            if (cart.length === 0) {
+                summaryContainer.innerHTML = "<p>Your cart is empty.</p>";
+                return;
+            }
+
+            let total = 0;
+
+            cart.forEach(item => {
+                const itemDiv = document.createElement("div");
+                itemDiv.style.display = "flex";
+                itemDiv.style.alignItems = "center";
+                itemDiv.style.marginBottom = "20px";
+                itemDiv.style.backgroundColor = "#fffaf1";
+                itemDiv.style.padding = "15px";
+                itemDiv.style.borderRadius = "12px";
+                itemDiv.style.boxShadow = "0 4px 10px rgba(0,0,0,0.1)";
+
+                itemDiv.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" style="width: 80px; height: 80px; border-radius: 10px; object-fit: cover; margin-right: 20px;">
+                    <div style="flex: 1;">
+                        <strong style="color:#5e3c26;">${item.name}</strong>
+                        <p style="margin: 5px 0;">Quantity: ${item.quantity}</p>
+                    </div>
+                    <div style="font-weight: bold; color: #2c3b5f;">SAR ${(item.price * item.quantity).toFixed(2)}</div>
+                    `;
+                summaryContainer.appendChild(itemDiv);
+
+                total += item.price * item.quantity;
+            });
+
+            totalPriceSpan.textContent = `SAR ${total.toFixed(2)}`;
+
+        });
+
+    </script>
+
+</body>
+</html>

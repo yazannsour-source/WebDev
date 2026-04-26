@@ -1,0 +1,151 @@
+<!--Created by: Reem Almokhdab-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>About Us | One More Bite</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="40x40" href="images/sweet.jpg">
+    <link rel="icon" sizes="400x400" href="images/sweet.jpg">
+</head>
+
+<body>
+    <header>
+        <div id="container">
+
+            <div class="header-flex">
+                <a href="Home.html" class="logo-left">
+                    <img src="images/One-More-Bite-loge.jpeg" alt="One More Bite" style="width: 180px;">
+                </a>
+                <!-- Moving Slideshow Box -->
+                <div class="moving-rectangle">
+                    <img class="slideshow-image" src="images/sample1.jpeg" alt="Slide 1">
+                </div>
+                <a href="cart.html" title="Basket" style="position: relative;">
+                    <img src="images/basket2.jpeg" alt="Basket" style="width: 80px;">
+                    <span id="cart-count" class="cart-count-badge">0</span>
+
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Shopping.html">Shopping</a></li>
+            <li><a href="Buildyourownbox.html">Build Your Own Box</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="header centered-header">
+            <h1>Made With Love & Sugar</h1>
+        </div>
+
+        <!-- Our story -->
+        <div class="story-section">
+            <div class="story-text">
+                <h2>Our Story</h2>
+                <p>It all started with a craving. Not just for something sweet, but for just one more bite.</p>
+                <p>Among friends and family, we noticed a pattern: people hesitated when dessert came around. Not because they didn't want it, but because the portions were just too big. One person wanted a taste of brownie, another was eyeing cheesecake, and someone else just wanted a single macaron. But dessert menus didn't offer variety. You had to choose one large portion, and that was it.</p>
+                <p>So we thought... why not create a place where dessert is fun, flexible, and never too much?</p>
+                <p><strong>One More Bite</strong> was born from that tiny wish: to let people enjoy many flavors, in mini sizes. A bite of red velvet, a nibble of tart, a swirl of cheesecake. You mix and match, build your own box, and never waste a crumb.</p>
+                <p>We are not just selling desserts. We are sharing joy, one small bite at a time.</p>
+            </div>
+
+            <div class="story-image">
+                <img src="images/manufacturery.jpg" alt="A man working on the manufactury" class="rounded-image">
+            </div>
+        </div>
+
+        <!-- Mission and Vision -->
+        <div class="mission-vision-section">
+            <div class="mv-image">
+                <img src="images/manufacturery2.jpg" alt="One of our desserts" class="rounded-image">
+            </div>
+            <div class="mv-text">
+                <h2>Mission</h2>
+                <p>To bring delight to every moment by crafting a variety of exquisite mini desserts that encourage mindful indulgence, spark creativity, and deliver satisfaction in every bite.</p>
+                <p>We aim to make desserts more approachable, shareable, and joy filled perfectly portioned for every craving and occasion.</p>
+
+                <h2>Vision</h2>
+                <p>To become the leading platform for customizable mini desserts, inspiring joyful moments and sweet memories, one bite at a time.</p>
+            </div>
+        </div>
+
+        <!-- Frequently asked questions-->
+        <section class="faq-section">
+            <h2 class="faq-title">FAQs</h2>
+
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">When will my delivery arrive?</button>
+                    <div class="faq-answer">Orders typically arrive within 2-3 business days after confirmation.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What areas do you deliver to?</button>
+                    <div class="faq-answer">We currently deliver to all regions within the Kingdom of Saudi Arabia</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What happens if I provide the wrong address?</button>
+                    <div class="faq-answer">You can contact our support team <a href="mailto:support@dessert.net">support@dessert.net</a> .</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">How far in advance to order my box?</button>
+                    <div class="faq-answer">We recommend ordering at least 24 hours in advance.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">Can we customise a box?</button>
+                    <div class="faq-answer"> Yes! With our "Build Your Own Box" feature, you can mix and match any type of dessert you like. Add a personal touch by writing a custom message. Perfect for birthdays or special occasions. You can create as many customized boxes as you want!</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What methods of payment do you accept?</button>
+                    <div class="faq-answer">Credit cards, Apple Pay.</div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">What if I want to cancel my order?</button>
+                    <div class="faq-answer">Please email us at <a href="mailto:support@dessert.net">support@dessert.net</a> within 24 hours of placing your order for any cancellations. A full refund will be issued.</div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- This script allows users to click on a question in the FAQ -->
+        <script>
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    button.classList.toggle('active');
+                    const answer = button.nextElementSibling;
+                    answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+                });
+            });
+        </script>
+
+        <!--To show cart items on all pages-->
+        <script>
+            window.addEventListener('DOMContentLoaded', () => {
+                const count = parseInt(localStorage.getItem('cart')) || [];
+                const badge = document.getElementById('cart-count');
+                if (badge) {
+                    badge.textContent = count.length;
+                }
+            });
+        </script>
+
+    </main>
+
+    <footer>
+        <p>&copy; Copyright 2025. All Rights Reserved.</p>
+        <p><a href="mailto:onemorebite@dessert.net">onemorebite@dessert.net</a></p>
+    </footer>
+</body>
+</html>

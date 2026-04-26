@@ -1,0 +1,167 @@
+﻿<!--- Norah Alhajri -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Cart | One More Bite</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Francois+One|Roboto+Slab&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="40x40" href="images/sweet.jpg">
+    <link rel="icon" sizes="400x400" href="images/sweet.jpg">
+</head>
+<body>
+
+    <header>
+        <div id="container">
+            <div class="header-flex">
+                <a href="Home.html" class="logo-left">
+                    <img src="images/One-More-Bite-loge.jpeg" alt="One More Bite" style="width: 180px;">
+                </a>
+                <div class="moving-rectangle">
+                    <img class="slideshow-image" src="images/sample1.jpeg" alt="Slide 1">
+                </div>
+                <a href="cart.html" title="Basket" style="position: relative;">
+                    <img src="images/basket2.jpeg" alt="Basket" style="width: 80px;">
+                    <span id="cart-count" class="cart-count-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Shopping.html">Shopping</a></li>
+            <li><a href="Buildyourownbox.html">Build Your Own Box</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Your Shopping Cart</h2>
+        <div id="cart-items"></div>
+        <p id="total-price"></p>
+
+        <div class="cart-buttons">
+            <button onclick="clearCart()">Clear Cart</button>
+            <button onclick="checkout()">Checkout</button>
+            <button onclick="history.back()">← Back</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 One More Bite. All Rights Reserved.</p>
+        <p><a href="mailto:onemorebite@dessert.net">onemorebite@dessert.net</a></p>
+    </footer>
+
+    <script>
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        const cartItemsContainer = document.getElementById("cart-items");
+        const totalPriceElement = document.getElementById("total-price");
+        const cartCountBadge = document.getElementById("cart-count");
+
+        function updateCartCount() {
+            let totalCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCountBadge.textContent = totalCount;
+        }
+
+        function renderCart() {
+            cartItemsContainer.innerHTML = "";
+            totalPriceElement.innerHTML = "";
+
+            if (cart.length === 0) {
+                cartItemsContainer.innerHTML = "<p>Your cart is currently empty.</p>";
+                return;
+            }
+
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const itemDiv = document.createElement("div");
+                itemDiv.classList.add("cart-item");
+
+                itemDiv.innerHTML = `
+                                            <img src="${item.image}" alt="${item.name}" style="width: 100px;">
+                                            <div class="cart-details">
+                                                <strong>${item.name}</strong><br>
+                                                Quantity: ${item.quantity}<br>
+                                                <button class="red-btn-small" onclick="decreaseQuantity(${index})">-</button>
+                                                <button class="red-btn-small" onclick="increaseQuantity(${index})">+</button>
+                                                <button class="red-btn-small" onclick="removeItem(${index})">x Remove</button>
+                                            </div>
+                                            <div class="cart-price">
+                                                SAR ${(item.price * item.quantity).toFixed(2)}
+                                            </div>
+                                        `;
+
+                cartItemsContainer.appendChild(itemDiv);
+                total += item.price * item.quantity;
+            });
+
+            totalPriceElement.textContent = `Total: SAR ${total.toFixed(2)}`;
+            updateCartCount();
+        }
+
+        function increaseQuantity(index) {
+            cart[index].quantity += 1;
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+        }
+
+        function decreaseQuantity(index) {
+            cart[index].quantity -= 1;
+            if (cart[index].quantity <= 0) {
+                cart.splice(index, 1);
+            }
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+        }
+
+        function removeItem(index) {
+            cart.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(cart));
+            renderCart();
+        }
+
+        function clearCart() {
+            cart = [];
+            localStorage.removeItem("cart");
+            renderCart();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Your cart is empty! Please add items before proceeding to checkout.");
+                return;
+            }
+
+            window.location.href = "checkout.html";
+        }
+
+        renderCart();
+    </script>
+
+    <script>
+        const images = [
+            "images/sample1.jpeg",
+            "images/sample2.jpeg",
+            "images/sample3.jpeg"
+        ];
+
+        let index = 0;
+        const imgElement = document.querySelector(".slideshow-image");
+
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            imgElement.style.opacity = 0;
+            setTimeout(() => {
+                imgElement.src = images[index];
+                imgElement.style.opacity = 1;
+            }, 500);
+        }, 10000);
+    </script>
+
+</body>
+</html>

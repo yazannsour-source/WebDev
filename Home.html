@@ -1,0 +1,132 @@
+<!--Created by: shaima Aldriweesh-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home | One More Bite</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="40x40" href="images/sweet.jpg">
+    <link rel="icon" sizes="400x400" href="images/sweet.jpg">
+</head>
+
+<body>
+    <header>
+        <div id="container">
+
+
+            <div class="header-flex">
+                <a href="Home.html" class="logo-left">
+                    <img src="images/One-More-Bite-loge.jpeg" alt="One More Bite" style="width: 180px;">
+                </a>
+                <!-- Moving Slideshow Box -->
+                <div class="moving-rectangle">
+                    <img class="slideshow-image" src="images/sample1.jpeg" alt="Slide 1">
+                </div>
+                <a href="cart.html" title="Basket" style="position: relative;">
+                    <img src="images/basket2.jpeg" alt="Basket" style="width: 80px;">
+                    <span id="cart-count" class="cart-count-badge">0</span>
+
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="About.html">About Us</a></li>
+            <li><a href="Shopping.html">Shopping</a></li>
+            <li><a href="Buildyourownbox.html">Build Your Own Box</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <!-- Special Marketing Section -->
+        <section class="special-section">
+            <div class="special-text">
+                <h2>Build your own box</h2>
+                <p>Mix and match your favorite desserts in a way you like.</p>
+                <a href="Buildyourownbox.html">Build Now</a>
+            </div>
+
+            <div class="special-image">
+                <img src="images/NewBox.png" alt="box">
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Menu Section -->
+    <h2>Our Products</h2>
+    <div class="menu-container">
+        <div class="menu-card">
+            <img src="images/brownie1.jpeg" alt="Brownie 1">
+            <p>Brownie</p>
+        </div>
+        <div class="menu-card">
+            <img src="images/cheesecake1.jpeg" alt="Cheesecake 1">
+            <p>Cheesecake</p>
+        </div>
+        <div class="menu-card">
+            <img src="images/macaron1.jpeg" alt="Macaron 1">
+            <p>Macaron</p>
+        </div>
+        <div class="menu-card">
+            <img src="images/pie1.jpeg" alt="Pie 1">
+            <p>Pie</p>
+        </div>
+        <div class="menu-card">
+            <img src="images/puffs1.jpeg" alt="Puffs 1">
+            <p>Puffs</p>
+        </div>
+        <div class="menu-card">
+            <img src="images/mille-feuille1.jpeg" alt="mille feuille 1">
+            <p>Mille Feuille</p>
+        </div>
+
+        <div class="menu-card">
+            <img src="images/cookies-design1.jpeg" alt="Cookies Design 1">
+            <p>Cookies Design</p>
+        </div>
+        <div class="menu-card">
+            <img src="images/cookies1.jpeg" alt="Cookies 1">
+            <p>Cookies</p>
+        </div>
+        <div class="menu-card">
+            <img src="images/cake1.jpeg" alt="Cake 1">
+            <p>Cake</p>
+        </div>
+        <div class="menu-card">
+            <img src="images/cake-ball1.jpeg" alt="cake-ball 1">
+            <p>Cake Ball</p>
+        </div>
+    </div>
+
+    <script>
+        const images = [
+            "images/sample1.jpeg",
+            "images/sample2.jpeg",
+            "images/sample3.jpeg"
+        ];
+
+        let index = 0;
+        const imgElement = document.querySelector(".slideshow-image");
+
+        setInterval(() => {
+            index = (index + 1) % images.length;
+            imgElement.style.opacity = 0;
+            setTimeout(() => {
+                imgElement.src = images[index];
+                imgElement.style.opacity = 1;
+            }, 500);
+        }, 10000);
+    </script>
+
+    <footer>
+        <p>&copy; Copyright 2025. All Rights Reserved.</p>
+        <p><a href="mailto:onemorebite@dessert.net">onemorebite@dessert.net</a></p>
+    </footer>
+
+</body>
+</html>
